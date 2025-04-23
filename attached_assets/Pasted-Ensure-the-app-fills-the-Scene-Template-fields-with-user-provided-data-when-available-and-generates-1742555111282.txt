@@ -1,0 +1,72 @@
+Ensure the app fills the Scene Template fields with user-provided data when available, and generates accurate AI-suggested content when fields are left blank.
+
+Extraction Rules for Scene Template Fields
+If a user does not provide information for a specific field in the Scene Template, the app should:
+
+Analyze the Scene Description
+
+Extract relevant keywords, emotions, and visual cues to generate appropriate values.
+Follow These Field-Specific Rules:
+
+Field-Specific Extraction Rules
+[Location]
+First Priority: Extract from user-provided description (e.g., "in a park," "in an alley," "in a busy office").
+Fallback Rule: If unspecified, generate a logical setting based on mood, lighting, and action.
+Example:
+Scene Description: A man rushes through a crowded street, looking over his shoulder.
+Auto-generated Location: Busy urban street
+[Time of Day]
+First Priority: Extract clear cues from user-provided description (e.g., "at dusk," "morning sunlight").
+Fallback Rule: Infer time of day based on scene mood and lighting conditions.
+Example:
+Scene Description: A lonely figure stands under flickering streetlights.
+Auto-generated Time of Day: Night
+[Mood]
+First Priority: Extract emotional language from description (e.g., "anxiously," "joyfully," "uneasy").
+Fallback Rule: Infer mood from described action or visual elements.
+Example:
+Scene Description: A woman clutches her bag tightly, glancing nervously behind her.
+Auto-generated Mood: Tense anticipation
+[Lighting Style]
+First Priority: Extract clear lighting details from user description.
+Fallback Rule: Infer lighting based on time of day and mood.
+Example:
+Scene Description: A man’s face is partially illuminated as he leans against a shadowy wall.
+Auto-generated Lighting Style: Moody, high-contrast lighting
+[In the Style of Director]
+First Priority: User-provided data.
+Fallback Rule: If unspecified, select a director based on visual cues:
+Emotional, intimate storytelling: Roger Deakins
+Suspenseful, shadowy visuals: David Fincher
+Dynamic action and motion: Christopher Nolan
+[Film Stock]
+First Priority: User-provided film stock.
+Fallback Rule: Select based on mood and visual tone:
+Bright, nostalgic scenes: Kodak Vision3 200T
+Moody, low-light settings: Kodak Vision3 500T
+Vibrant, colorful moments: Fujifilm Eterna Vivid 500
+[Color Palette]
+First Priority: Extract from user description if colors are mentioned (e.g., "rich earth tones," "cold blue hues").
+Fallback Rule: Assign colors that match the mood and time of day:
+Golden Hour Scenes: Warm golds, oranges, and browns
+Suspense Scenes: Deep blues, grays, and shadows
+Joyful Scenes: Pastel tones and light highlights
+Example of Full Extraction Flow
+Scene Description: A teenage girl walks anxiously down a narrow alley, gripping her backpack tightly, her face half-lit by flickering streetlights.
+
+Auto-generated Scene Template Fields:
+
+Location: Narrow alley
+Time of Day: Evening
+Mood: Anxious anticipation
+Lighting Style: Flickering streetlights
+In the Style of Director: David Fincher
+Film Stock: Kodak Vision3 500T
+Color Palette: Deep blue and amber hues
+Technical Implementation Notes for Developers
+✅ Prioritize user-provided data; never overwrite it.
+✅ Use natural language processing (NLP) to identify keywords for inference.
+✅ Ensure Scene Template Fields update dynamically when the Scene Description is modified.
+✅ Auto-generated entries should include a tooltip or label that states:
+
+"AI-generated suggestion based on scene description. Click to edit."

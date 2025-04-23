@@ -1,0 +1,79 @@
+Homepage Layout: Main Content Under Header
+🎯 Objective:
+Create a visually modern, clean, and well-aligned homepage that introduces the app’s main functionality with clearly separated sections, refined spacing, updated fonts, and visually appealing call-to-action (CTA) buttons.
+
+✨ SECTION 1 — Intro Hero Block
+Text Alignment and Styling
+Center-align all text in this section.
+
+Use a larger font size for the main headline:
+“Create the Perfect Prompt for Stunning AI-Generated Images and Videos!”
+→ Font weight: 700, Font size: 2.2rem
+
+Subtitle paragraph: → Font size: 1rem to 1.125rem
+→ Max-width: 800px, centered
+→ Slightly reduced line height for compactness
+→ Add bottom margin to separate it clearly from the buttons below
+
+🎨 CTA BUTTON BLOCK (Image, Illustration, Motion)
+Layout
+Use 3 equally sized buttons placed side by side in a flex row with equal spacing
+
+Add padding inside each button (e.g. padding: 20px 40px)
+
+Buttons should be full-width on mobile (stacked vertically)
+
+Styling
+Image / Illustration / Motion buttons:
+
+Background: #E4572E (bright orange)
+
+Text: white, bold
+
+Border-radius: 10px
+
+Font size: 1.1rem
+
+Add hover effect: slight scale-up and shadow
+
+🧱 SECTION 2 — Filmmaking Prompt Block
+Headline
+Title: “Craft Professional Movie Frames and Bring Them to Life!”
+→ Font size: 2rem, weight: 700
+→ Text-align: center
+→ Margin-top: 80px
+
+Description Text
+Subtitle paragraph:
+→ Keep line length readable (max 80 characters per line)
+→ Centered below title
+→ Font size: 1rem–1.125rem
+→ Add spacing between paragraph and buttons
+
+🎬 CTA BUTTON BLOCK (Movie Frames, Shot List)
+Layout
+2 buttons in a row (or stacked on mobile)
+
+Equal width (auto-fit with max-width on large screens)
+
+Spaced evenly with gap: 24px or similar
+
+Styling
+Background color: #00B6C1 (turquoise/teal)
+
+Font: bold, white
+
+Border-radius: 10px
+
+Hover effect: soft glow or scale-up
+
+✅ GENERAL STYLE RULES
+Font: Use Inter or Poppins (clean modern sans-serif)
+
+Container width: Max-width 1200px, centered
+
+Padding: Add 60px top & bottom padding per section
+
+Dark mode background: #0b0b0b or #121212
+
+Text color: White or light gray #eeeeee

@@ -1,0 +1,28 @@
+The generated cinematic prompt must adhere to this detailed structure:
+" Cinematic,
+[Photography Genre]
+[Subject (gender, age, appearance, attire, emotional cues)]
+[Action/Emotional Cue]
+[Shot/Frame Type]
+[Camera Angle]
+[Position in Frame (left, right, center, etc.) with Leading Space for Movement or Tension]
+[Character's Direction of Movement or Gaze]
+[Location/Environmental Details]
+[Fashion/Film Set Design/Background Elements]
+[Foreground Elements (e.g., branches, door frame, etc.) for Depth]
+[Name of Cinematographer or Film Director for Visual Style]
+[Movie Camera Type]
+[Lenses]
+[Film Stock]
+[Type and Source of Lighting]
+[Color Palette]
+[Photography Aesthetic]
+[Mood/Emotion]
+[Movement in Frame (dynamic shifts, slow turns, etc.)]
+[Camera Movement (e.g., Tracking Shot, Whip Pan, Push-in)]
+[Continuity and Visual Logic (e.g., Moving Left to Right to maintain consistent flow)]
+[Focus Priority (e.g., subject’s face, object, distant figure)]
+[Texture and Atmospheric Details (e.g., dust floating in light, rippling water reflections)]
+--ar 16:9
+--style raw "
+Example: Cinematic, Drama Photography, A young woman, mid-20s, with shoulder-length auburn hair, freckles, and tear-streaked cheeks, wearing a faded oversized sweater and holding a crumpled letter tightly in her hands, Standing frozen on a quiet suburban sidewalk, her gaze locked on a distant house as memories overwhelm her, Medium Shot, Eye Level, Positioned on the right third of the frame with ample leading space to the left, Her gaze fixed anxiously towards the house, Set in a suburban street lined with bare trees and faded picket fences, Distant house windows softly illuminated, a flickering porch light adding warmth, In the foreground, a discarded bicycle wheel lies partially visible in frame, Inspired by Roger Deakins, Shot on ARRI Alexa Mini, Zeiss Master Prime 35mm lens, Kodak Vision3 250D, Natural diffused light mixed with faint artificial glow from streetlamps, Cool muted tones with warm highlights around the house windows, A photorealistic yet haunting aesthetic, A mood of heartbreak and emotional turmoil, The woman's trembling fingers clutch the letter as the wind tousles her hair, Camera slowly pushes in towards her face to emphasize her inner turmoil, Continuity maintained with a consistent right-to-left movement throughout the sequence, Focus on the woman's face with the distant house softened in the background, The rough texture of the pavement and the worn letter's creased edges add realism, --ar 16:9 --style raw

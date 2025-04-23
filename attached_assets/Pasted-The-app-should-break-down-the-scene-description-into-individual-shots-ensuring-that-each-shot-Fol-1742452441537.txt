@@ -1,0 +1,26 @@
+The app should break down the scene description into individual shots, ensuring that each shot:
+
+Follows professional cinematic storytelling principles.
+Aligns with established rules of continuity, visual logic, and emotional flow.
+Reflects consistent visual elements from the generated Scene Template (location, lighting, color palette, etc.).
+Shot Structure for Each Breakdown
+Each shot should follow this structure:
+
+Action/Subject Description: Describe the key visual action (e.g., A girl walks away from the camera...).
+Shot Type: Specify the shot size (e.g., Wide Shot, Medium Shot, Close-up).
+Direction of Movement: Indicate if characters or objects are moving in a specific direction (e.g., Walks away from the camera, Moves left to right, etc.).
+Emotional Highlight: Describe key emotional cues if relevant (e.g., Anxious expression, Tense glance, etc.).
+Environmental Details/Lighting (from the Scene Template): Ensures continuity with mood, color palette, and atmosphere.
+Visual Focus: Specify what the camera prioritizes (e.g., Focus on girl's tense face, Focus on flickering light in distance).
+Camera Positioning/Angle: Indicate camera position if critical (e.g., Low Angle, Over-the-shoulder shot).
+Example Breakdown:
+Scene Description Input:
+"A teenage girl walks down a narrow alley at dusk. She hears footsteps behind her, turns her head anxiously, and begins to walk faster. She clutches her backpack tightly. A shadow briefly flickers past a distant streetlight."
+
+Shot Breakdown Output:
+
+Shot 1: A girl walks away from the camera, the alley narrows ahead, Wide Shot, Abandoned Theater, Late Afternoon / Sunset, Nostalgic, eerie silence, Kodak Vision3 500T, golden hour lighting, muted earth tones, melancholic reflective mood.
+Shot 2: The girl’s pace quickens as faint footsteps echo in the distance, Medium Shot from behind, Abandoned Theater, Late Afternoon / Sunset, Nostalgic, eerie silence, Kodak Vision3 500T, golden hour lighting, muted earth tones, melancholic reflective mood.
+Shot 3: The girl glances back anxiously, her expression tense, Over-the-shoulder Shot, Abandoned Theater, Late Afternoon / Sunset, Nostalgic, eerie silence, Kodak Vision3 500T, golden hour lighting, muted earth tones, melancholic reflective mood.
+Shot 4: The girl's hand gripping her backpack tightly, Close-up, Abandoned Theater, Late Afternoon / Sunset, Nostalgic, eerie silence, Kodak Vision3 500T, golden hour lighting, muted earth tones, melancholic reflective mood.
+Shot 5: A shadow briefly flickers past a distant streetlight, Wide Shot, Abandoned Theater, Late Afternoon / Sunset, Nostalgic, eerie silence, Kodak Vision3 500T, golden hour lighting, muted earth tones, melancholic reflective mood.

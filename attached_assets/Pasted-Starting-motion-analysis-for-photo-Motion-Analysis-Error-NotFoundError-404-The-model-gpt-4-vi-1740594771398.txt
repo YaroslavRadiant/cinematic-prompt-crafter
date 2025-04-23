@@ -1,0 +1,45 @@
+Starting motion analysis for photo...
+Motion Analysis Error: NotFoundError: 404 The model `gpt-4-vision-preview` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations
+    at Function.generate (/home/runner/workspace/node_modules/openai/src/error.ts:84:14)
+    at OpenAI.makeStatusError (/home/runner/workspace/node_modules/openai/src/core.ts:443:21)
+    at OpenAI.makeRequest (/home/runner/workspace/node_modules/openai/src/core.ts:507:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async analyzePhotoForMotion (/home/runner/workspace/server/openai.ts:115:28)
+    at async <anonymous> (/home/runner/workspace/server/routes.ts:103:26) {
+  status: 404,
+  headers: {
+    'alt-svc': 'h3=":443"; ma=86400',
+    'cf-cache-status': 'DYNAMIC',
+    'cf-ray': '918203f84a6175a0-SEA',
+    connection: 'keep-alive',
+    'content-encoding': 'gzip',
+    'content-type': 'application/json; charset=utf-8',
+    date: 'Wed, 26 Feb 2025 18:32:03 GMT',
+    server: 'cloudflare',
+    'set-cookie': '__cf_bm=PwjEhTVxJ2b0Z53EonJw7F.eL3XctTRkN300x..3MEw-1740594723-1.0.1.1-nyxTWvNySzCQWIlogBAtmAEk1aoS.2Z59XGD8l1jdYMV0f0f740IpfQ8hqPd6LFYGqJcoEhpI30dzfuRfx_AQw; path=/; expires=Wed, 26-Feb-25 19:02:03 GMT; domain=.api.openai.com; HttpOnly; Secure; SameSite=None, _cfuvid=kjc.TYu8LHKmRKhLXEaoEorMXxPMzjHuHDh5qaKMoow-1740594723354-0.0.1.1-604800000; path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None',
+    'strict-transport-security': 'max-age=31536000; includeSubDomains; preload',
+    'transfer-encoding': 'chunked',
+    vary: 'Origin',
+    'x-content-type-options': 'nosniff',
+    'x-request-id': 'req_115715911eb222fa2d3e66af5a604868'
+  },
+  request_id: 'req_115715911eb222fa2d3e66af5a604868',
+  error: {
+    message: 'The model `gpt-4-vision-preview` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations',
+    type: 'invalid_request_error',
+    param: null,
+    code: 'model_not_found'
+  },
+  code: 'model_not_found',
+  param: null,
+  type: 'invalid_request_error'
+}
+Analysis failed: Error: Failed to analyze motion: 404 The model `gpt-4-vision-preview` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations
+    at analyzePhotoForMotion (/home/runner/workspace/server/openai.ts:176:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async <anonymous> (/home/runner/workspace/server/routes.ts:103:26)
+Photo Analysis Error: Error: Failed to analyze motion: 404 The model `gpt-4-vision-preview` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations
+    at analyzePhotoForMotion (/home/runner/workspace/server/openai.ts:176:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async <anonymous> (/home/runner/workspace/server/routes.ts:103:26)
+6:32:03 PM [express] POST /api/analyze-photo 500 in 1995ms :: {"message":"Failed to analyze motion: …

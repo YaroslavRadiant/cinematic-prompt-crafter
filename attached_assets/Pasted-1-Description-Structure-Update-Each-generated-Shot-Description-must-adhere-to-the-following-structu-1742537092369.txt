@@ -1,0 +1,71 @@
+1. Description Structure Update
+Each generated Shot Description must adhere to the following structure in this exact order:
+[Shot Type], [Camera Angle], [Action], [Location], [Time of the Day], [Lighting], [In the Style of Director], [Film Stock], [Color Palette], [Mood]
+
+✅ Example:
+Tracking shot, Camera follows from behind, Teenage girl walking down a narrow alley, Modern urban setting, Golden hour, Natural with artificial highlights, Roger Deakins, Kodak Vision3 500T, Rich earth tones, Contemplative mood
+
+2. Data Source Rules for Each Element
+[Shot Type] → Derived from Shot Details.
+[Camera Angle] → Derived from Shot Details.
+[Action] → Derived from User-provided scene description.
+[Location] → Derived from the Scene Template. If blank → Use AI-suggested contextual value.
+[Time of the Day] → Derived from the Scene Template. If blank → Use AI-suggested contextual value.
+[Lighting] → Derived from the Scene Template. If blank → Use AI-suggested contextual value.
+[In the Style of Director] → Derived from the Scene Template. If blank → Use AI-suggested contextual value.
+[Film Stock] → Derived from the Scene Template. If blank → Use AI-suggested contextual value.
+[Color Palette] → Derived from the Scene Template. If blank → Use AI-suggested contextual value.
+[Mood] → Derived from the Scene Template. If blank → Use AI-suggested contextual value.
+3. Visual Continuity Logic (Critical Fix)
+Add logic to analyze movement direction in each shot and apply appropriate continuity rules:
+If a character exits frame left, the following shot should introduce them entering frame right (or vice versa).
+Apply the 180-degree rule to maintain consistent screen direction.
+Ensure characters maintain consistent gaze direction throughout consecutive shots.
+✅ Example Continuity Fix:
+Shot 1: Wide shot, The girl walks away from the camera, moving left to right.
+Shot 2: Close-up shot, The girl turns her head anxiously to the left to maintain continuity.
+
+4. Emotional Beat Logic
+Add logic to suggest Close-Up or Insert Shots when a key emotional beat or object interaction is described in the scene.
+✅ Example for Emotional Beat Addition:
+If the user description mentions:
+"She clutches her backpack tightly"
+→ Automatically generate a Close-Up shot of her hand gripping the bag to emphasize anxiety.
+
+5. Progressive Tension Logic
+Ensure scene breakdowns follow natural story escalation logic:
+Introduce tension by moving from Wide Shot → Medium Shot → Close-Up → Insert Shot.
+✅ Example Sequence for a Suspense Scene:
+
+Shot 1: Wide shot, The girl walks calmly.
+Shot 2: Medium shot, Her pace quickens.
+Shot 3: Close-up, She turns her head anxiously.
+Shot 4 (Insert Shot): A shadow flickers past a distant streetlight.
+6. Shot Description Copy Button
+Each shot must include a Copy Description button under the description for quick export.
+7. Scene Template Priority
+If the user fills in the Scene Template, this data must have priority over auto-generated values.
+8. Auto-Fill Missing Data (Fallback Rule)
+If Scene Template fields are empty, the app should generate AI-suggested values based on context.
+9. Transition Logic
+Each shot should suggest an appropriate transition if specified (e.g., Cut to Close-Up, Match Cut, Whip Pan).
+Final Example of Correctly Generated Scene Breakdown
+✅ Shot 1:
+Tracking shot, Camera follows from behind, Teenage girl walking down a narrow alley, Modern urban setting, Golden hour, Natural with artificial highlights, Roger Deakins, Kodak Vision3 500T, Rich earth tones, Contemplative mood
+
+✅ Shot 2:
+Close-up shot, Static camera, Profile view of the girl's face as she anxiously turns her head back to the left, Modern urban setting, Golden hour, Shadowy tones, Roger Deakins, Kodak Vision3 500T, Rich earth tones, Tense mood
+
+✅ Shot 3:
+Close-up shot, Static camera, The girl's hand gripping her backpack tightly, Modern urban setting, Golden hour, Natural with artificial highlights, Roger Deakins, Kodak Vision3 500T, Rich earth tones, Anxious mood
+
+✅ Shot 4 (Insert Shot):
+Close-up shot, Static camera, A shadow flickers past a distant streetlight, Modern urban setting, Golden hour, Natural with artificial highlights, Roger Deakins, Kodak Vision3 500T, Rich earth tones, Tense mood
+
+Key Instructions for Replit Implementation
+Update the logic to prioritize Scene Template data unless overridden by the user's Scene Description.
+Implement continuity analysis to ensure visual flow between shots.
+Introduce logic to add Emotional Beat Shots automatically when tension cues are present.
+Enforce the updated Shot Description Structure strictly.
+Ensure each shot includes a Copy Description button for user convenience.
+Use fallback logic to generate intelligent data when key fields are empty.

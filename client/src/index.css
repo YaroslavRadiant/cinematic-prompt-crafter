@@ -1,0 +1,233 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Gradient icon glow effects */
+button:hover .w-28 {
+  filter: drop-shadow(0 0 12px rgba(255, 106, 0, 0.8));
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+}
+
+button:hover .w-28 [stroke^="url(#film-gradient)"],
+button:hover .w-28 [stroke^="url(#list-gradient)"] {
+  filter: drop-shadow(0 0 12px rgba(0, 229, 255, 0.8));
+}
+
+button:hover .w-28 [stroke^="url(#target-gradient)"],
+button:hover .w-28 [stroke^="url(#pencil-gradient)"],
+button:hover .w-28 [stroke^="url(#motion-gradient)"] {
+  filter: drop-shadow(0 0 12px rgba(255, 106, 0, 0.8));
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 5%;
+    --foreground: 0 0% 90%;
+
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 80%;
+
+    --border: 0 0% 13%;
+
+    --primary: 24 100% 50%; /* #FF6A00 (neon orange) */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 187 100% 50%; /* #00E5FF (cyan blue) */
+    --secondary-foreground: 0 0% 100%;
+
+    --box-bg: 0 0% 9%; /* #161616 */
+
+    --accent: 0 0% 85%;
+    --accent-foreground: 0 0% 10%;
+
+    --card: 0 0% 8%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 0 0% 5%;
+    --popover-foreground: 0 0% 90%;
+
+    --destructive: 0 63% 50%;
+    --destructive-foreground: 0 0% 98%;
+
+    --ring: 0 100% 50%;
+
+    --radius: 0.5rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html,
+  body {
+    @apply antialiased;
+    background-color: #0e0e0e;
+    color: #cccccc;
+    font-family: "Inter", sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Sora", sans-serif;
+    letter-spacing: -0.02em;
+  }
+}
+
+/* Animation keyframes */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes glow {
+  0%,
+  100% {
+    box-shadow: 0 0 15px rgba(255, 106, 0, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(255, 106, 0, 0.4);
+  }
+}
+
+@keyframes textGlow {
+  0%,
+  100% {
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.1);
+  }
+  50% {
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+  }
+}
+
+@keyframes gradientPulse {
+  0%,
+  100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+@keyframes floatShadow {
+  0%,
+  100% {
+    box-shadow: 0 10px 25px -5px rgba(0, 229, 255, 0.1);
+  }
+  50% {
+    box-shadow: 0 20px 25px -5px rgba(0, 229, 255, 0.2);
+  }
+}
+
+.animate-fadeUp {
+  animation: fadeUp 0.8s ease-out forwards;
+}
+
+.animate-fadeLeft {
+  animation: fadeLeft 0.8s ease-out forwards;
+}
+
+.animate-glow {
+  animation: glow 3s ease-in-out infinite;
+}
+
+.animate-textGlow {
+  animation: textGlow 3s ease-in-out infinite;
+}
+
+.animate-gradientPulse {
+  animation: gradientPulse 8s ease-in-out infinite;
+}
+
+.animate-floatShadow {
+  animation: floatShadow 6s ease-in-out infinite;
+}
+
+/* Gradient text and backgrounds */
+.gradient-text-primary {
+  background: linear-gradient(90deg, #ff6a00, #ff9e50);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.gradient-text-secondary {
+  background: linear-gradient(90deg, #00e5ff, #00b8ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.gradient-bg-primary {
+  background: linear-gradient(
+    120deg,
+    rgba(255, 106, 0, 0.2),
+    rgba(255, 106, 0, 0.05)
+  );
+}
+
+.gradient-bg-secondary {
+  background: linear-gradient(
+    120deg,
+    rgba(0, 229, 255, 0.2),
+    rgba(0, 229, 255, 0.05)
+  );
+}
+
+/* Button styles */
+.btn-ghost {
+  @apply bg-transparent text-white border border-white/40 hover:border-white/80 transition-all duration-300;
+  @apply hover:bg-white/5 hover:shadow-[0_0_15px_rgba(255,255,255,0.2)];
+}
+
+.btn-primary-outline {
+  @apply bg-transparent text-[#FF6A00] border border-[#FF6A00]/40 hover:border-[#FF6A00]/80 transition-all duration-300;
+  @apply hover:bg-[#FF6A00]/5 hover:shadow-[0_0_15px_rgba(255,106,0,0.2)];
+}
+
+.btn-secondary-outline {
+  @apply bg-transparent text-[#00E5FF] border border-[#00E5FF]/40 hover:border-[#00E5FF]/80 transition-all duration-300;
+  @apply hover:bg-[#00E5FF]/5 hover:shadow-[0_0_15px_rgba(0,229,255,0.2)];
+}
+
+/* Card with glow effect */
+.card-glow {
+  @apply border border-[#222222] bg-[#161616] rounded-xl overflow-hidden transition-all duration-500;
+  @apply hover:shadow-[0_0_30px_rgba(255,255,255,0.05)] hover:border-[#333333];
+}
+
+.card-glow-primary {
+  @apply border border-[#FF6A00]/20 bg-[#161616] rounded-xl overflow-hidden transition-all duration-500;
+  @apply hover:shadow-[0_0_30px_rgba(255,106,0,0.1)] hover:border-[#FF6A00]/30;
+}
+
+.card-glow-secondary {
+  @apply border border-[#00E5FF]/20 bg-[#161616] rounded-xl overflow-hidden transition-all duration-500;
+  @apply hover:shadow-[0_0_30px_rgba(0,229,255,0.1)] hover:border-[#00E5FF]/30;
+}
+
+.o--Widget--popupBg {
+  padding: 400px 0 0 0 !important;
+}

@@ -1,0 +1,46 @@
+5:39:28 PM [express] serving on port 5000
+Processing image: 1000685 bytes, type: image/png
+Motion Analysis Error: NotFoundError: 404 The model `gpt-4-vision-preview` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations
+    at Function.generate (/home/runner/workspace/node_modules/openai/src/error.ts:84:14)
+    at OpenAI.makeStatusError (/home/runner/workspace/node_modules/openai/src/core.ts:443:21)
+    at OpenAI.makeRequest (/home/runner/workspace/node_modules/openai/src/core.ts:507:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async analyzePhotoForMotion (/home/runner/workspace/server/openai.ts:105:28)
+    at async <anonymous> (/home/runner/workspace/server/routes.ts:103:26) {
+  status: 404,
+  headers: {
+    'alt-svc': 'h3=":443"; ma=86400',
+    'cf-cache-status': 'DYNAMIC',
+    'cf-ray': '9181b8181ebedf07-SEA',
+    connection: 'keep-alive',
+    'content-encoding': 'gzip',
+    'content-type': 'application/json; charset=utf-8',
+    date: 'Wed, 26 Feb 2025 17:40:15 GMT',
+    server: 'cloudflare',
+    'set-cookie': '__cf_bm=ZzC9JxfjjMwGVXIV8EXKH9CRLcm9B7NHqHsMvSq9HBQ-1740591615-1.0.1.1-y7PsecV3ruEirHzRT1SLOQ60KlEosb7GXmVrpF3vL9U.QamIHK8Y6tlUw5ExwzuvfXoV11BdFWj6Vw3f9OeWDw; path=/; expires=Wed, 26-Feb-25 18:10:15 GMT; domain=.api.openai.com; HttpOnly; Secure; SameSite=None, _cfuvid=A7FB3mZGA5gONrWB9.1.1KmPkgAtCJMKAwaV9C.GOEk-1740591615456-0.0.1.1-604800000; path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None',
+    'strict-transport-security': 'max-age=31536000; includeSubDomains; preload',
+    'transfer-encoding': 'chunked',
+    vary: 'Origin',
+    'x-content-type-options': 'nosniff',
+    'x-request-id': 'req_de05ec6dff53b048f4f7a178af2ecb54'
+  },
+  request_id: 'req_de05ec6dff53b048f4f7a178af2ecb54',
+  error: {
+    message: 'The model `gpt-4-vision-preview` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations',
+    type: 'invalid_request_error',
+    param: null,
+    code: 'model_not_found'
+  },
+  code: 'model_not_found',
+  param: null,
+  type: 'invalid_request_error'
+}
+Analysis failed: Error: Failed to analyze motion
+    at analyzePhotoForMotion (/home/runner/workspace/server/openai.ts:159:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async <anonymous> (/home/runner/workspace/server/routes.ts:103:26)
+Photo Analysis Error: Error: Failed to analyze motion
+    at analyzePhotoForMotion (/home/runner/workspace/server/openai.ts:159:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async <anonymous> (/home/runner/workspace/server/routes.ts:103:26)
+5:40:15 PM [express] POST /api/analyze-photo 500 in 1810ms :: {"message":"Failed to analyze motion"}

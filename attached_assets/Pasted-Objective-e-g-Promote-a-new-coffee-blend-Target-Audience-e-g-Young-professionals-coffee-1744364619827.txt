@@ -1,0 +1,73 @@
+Objective: [e.g., Promote a new coffee blend]
+
+Target Audience: [e.g., Young professionals, coffee enthusiasts]
+
+Core Message / Proposition: [e.g., Brewed with Passion. Served with Love.]
+
+Call to Action (CTA): [e.g., Visit our café today!]
+
+Tone and Mood: [e.g., Inviting, luxurious, energetic]
+
+Media Format and Size: [e.g., Instagram Story (1080x1920), A3 print poster]
+
+Essential Information: [e.g., Website, social media handle, address]
+Visual Requirements: Design or Image Style: [e.g., Cinematic, Ghibli, Realistic, Cyberpunk]
+
+Creative Requirements: [e.g., Use brand colors #FF6A00 and #00E5FF. Logo must be placed in the top left corner. Use brand font.]
+
+Assets: [Optional] Product photo and logo will be uploaded by the user and can be used to influence positioning or lighting.
+Optional Advanced Fields (Only if user fills them): // Only include these if provided
+Lighting and Mood: [e.g., Soft golden-hour lighting, warm tones, dramatic shadows]
+
+Composition and Framing: [e.g., Medium close-up, subject centered, rule of thirds]
+
+Props and Additional Elements: [e.g., Coffee beans scattered, rustic table, small plant]
+
+Model/Person Involvement: [e.g., A barista holding the coffee cup with care]
+
+Action or Pose: [e.g., Pouring coffee, hands warming the mug]
+
+Focus Points: [e.g., Product label, texture of ceramic cup, rising steam]
+
+Post-Processing Style: [e.g., Film grain, warm grading, soft glow]
+Prompt Template for Advertising Imagery: Create a high-quality advertising image based on the following creative brief:
+
+Objective: [What is the goal of this image? e.g., Promote a new coffee blend]
+
+Target Audience: [e.g., Young professionals, health-conscious adults]
+
+Core Message: [e.g., Brewed with Passion. Served with Love.]
+
+Format & Size: [e.g., Instagram Story (1080x1920), A3 print, Facebook Post]
+
+Visual Style: [e.g., Cinematic, Realistic, Cyberpunk, Ghibli, Minimalist]
+
+Tone & Mood: [e.g., Inviting, Luxurious, Energetic, Soft, Mysterious]
+
+Composition & Framing: [e.g., Medium Close-Up, Rule of Thirds, Central Focus, Negative Space]
+
+Lighting: [e.g., Warm golden-hour light, dramatic spotlight, soft daylight]
+
+Model/Person Involvement (optional):
+[Describe the human presence if applicable. e.g., Smiling barista holding a cup with two hands]
+
+Action or Gesture:
+[What is happening in the image? e.g., Pouring coffee, hands holding product with steam rising]
+
+Focus Points:
+[Highlight key visual details. e.g., Product label, logo, steam, texture of the mug]
+
+Post-Processing Look (optional):
+[Optional visual finish: e.g., Film grain, warm color grading, soft blur, high contrast]
+
+Props & Elements:
+[List any relevant objects. e.g., Wooden table, scattered coffee beans, potted plant, brand packaging]
+
+Brand Identity Elements:
+[Logo placement, color palette, font treatment — e.g., Logo top left, use #FF6A00 + #00E5FF, clean sans-serif overlay text]
+
+Call to Action:
+[Text to be visualized or included on the ad: e.g., “Visit our café today!”]
+
+Essential Info (optional):
+[e.g., Website URL, social handles, contact number, event date]

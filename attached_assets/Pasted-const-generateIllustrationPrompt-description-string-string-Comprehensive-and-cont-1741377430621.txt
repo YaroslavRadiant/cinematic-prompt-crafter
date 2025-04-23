@@ -1,0 +1,51 @@
+const generateIllustrationPrompt = (description: string): string => {
+    // Comprehensive and contextually aware prompt generation logic
+    const segments = {
+        type: description.toLowerCase().includes("pixar") ? "Pixar-Style 3D Animation" : 
+              description.toLowerCase().includes("anime") ? "Anime-Style 2D Animation" : 
+              description.toLowerCase().includes("cartoon") ? "Cartoon-Style Animation" : "3D Animation",
+
+        subject: description || "a character",
+        action: description.toLowerCase().includes("running") ? "running energetically across a park" :
+                description.toLowerCase().includes("dancing") ? "dancing joyfully on stage" :
+                description.toLowerCase().includes("sleeping") ? "sleeping peacefully in a warm bed" : "engaged in a dynamic action",
+
+        shotType: description.toLowerCase().includes("close-up") ? "Medium Close-Up Shot" :
+                  description.toLowerCase().includes("wide") ? "Wide Shot" : "Full Body Shot",
+
+        cameraAngle: description.toLowerCase().includes("eye level") ? "Eye Level" :
+                     description.toLowerCase().includes("low angle") ? "Low Angle" :
+                     description.toLowerCase().includes("high angle") ? "High Angle" : "Dynamic Camera Angle",
+
+        location: description.toLowerCase().includes("living room") ? "cozy modern living room with plush furnishings" :
+                  description.toLowerCase().includes("forest") ? "lush green forest with tall trees and dappled sunlight" :
+                  description.toLowerCase().includes("beach") ? "sandy beach with gentle waves and seashells scattered across the shore" : "a rich environment with detailed elements",
+
+        timeAndYear: description.toLowerCase().includes("morning") ? "Morning Light streaming through a window" :
+                     description.toLowerCase().includes("sunset") ? "Golden sunset with warm tones across the sky" : "dynamic daylight conditions",
+
+        background: description.toLowerCase().includes("modern") ? "modern interior design with sleek furniture" :
+                    description.toLowerCase().includes("vintage") ? "vintage room filled with nostalgic decor" : "immersive background setting",
+
+        studio: description.toLowerCase().includes("pixar") ? "inspired by Pixar" :
+                description.toLowerCase().includes("ghibli") ? "inspired by Studio Ghibli" : "inspired by a top animation studio",
+
+        engine: description.toLowerCase().includes("blender") ? "Blender" :
+                description.toLowerCase().includes("unreal") ? "Unreal Engine" : "powerful rendering engine",
+
+        lighting: description.toLowerCase().includes("sunlight") ? "warm sunlight with soft shadows" :
+                   description.toLowerCase().includes("moody") ? "dark moody lighting with dramatic contrasts" : "soft natural lighting",
+
+        colorPalette: description.toLowerCase().includes("pastel") ? "pastel and soft color palette" :
+                      description.toLowerCase().includes("vibrant") ? "vibrant colors with emphasis on contrast" : "rich and expressive color tones",
+
+        aesthetic: description.toLowerCase().includes("heartwarming") ? "Heartwarming Animation Aesthetic" :
+                   description.toLowerCase().includes("dark") ? "Dark Animation Aesthetic" : "Cinematic Animation Aesthetic",
+
+        mood: description.toLowerCase().includes("joyful") ? "joyful and cheerful mood" :
+               description.toLowerCase().includes("serious") ? "serious and intense mood" : "playful and energetic mood"
+    };
+
+    // Generate a comprehensive, context-aware prompt structure
+    return `${segments.type}, ${segments.subject}, ${segments.action}, ${segments.shotType}, ${segments.cameraAngle}, ${segments.location}, ${segments.timeAndYear}, ${segments.background}, ${segments.studio}, ${segments.engine}, ${segments.lighting}, ${segments.colorPalette}, ${segments.aesthetic}, ${segments.mood}, --ar 3:4 --style raw`;
+};

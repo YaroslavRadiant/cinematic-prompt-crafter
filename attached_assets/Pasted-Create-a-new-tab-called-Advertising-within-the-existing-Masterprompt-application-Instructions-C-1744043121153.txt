@@ -1,0 +1,92 @@
+Create a new tab called "Advertising" within the existing Masterprompt application.
+
+Instructions:
+Create the Advertising Tab:
+
+Add a new menu item labeled "Advertising" in the main navigation bar.
+
+Ensure the tab is visible alongside existing functionalities (e.g., Movie Tools, Image Tools).
+
+Tab Structure:
+
+The Advertising tab should have a three-step process:
+
+Marketing Brief (Strategic Input)
+
+Creative Execution (Visual Settings)
+
+Preview and Generate
+
+Marketing Brief (Step 1):
+
+Create a form with the following fields:
+
+Purpose: Text input (e.g., "Promote a product")
+
+Target Audience: Text input (e.g., "Young professionals")
+
+Core Message: Text input (e.g., "Brewed with Passion. Served with Love.")
+
+Tone and Mood: Dropdown (e.g., Inviting, Professional, Luxurious)
+
+Call to Action: Text input (e.g., "Visit our café today!")
+
+Essential Information: Multi-line text input (e.g., dates, website, contact)
+
+Format and Size: Text input with auto-suggestion (e.g., "Instagram Story (1080x1920)")
+
+Special Requirements: Text input (e.g., logo placement)
+
+Creative Execution (Step 2):
+
+Allow users to choose between Simple and Advanced modes:
+
+Simple:
+
+Upload buttons for Logo and Product Image
+
+Color picker for Brand Colors
+
+Dropdown for Design Style (e.g., Minimalist, Vintage, Cinematic)
+
+Dropdown for Image Style (Aesthetic) (e.g., Ghibli, Realistic, Cyberpunk)
+
+Advanced:
+
+Additional fields for Lighting, Composition, Props, Focus Points
+
+Text input for Post-Processing Preferences
+
+Text input for Action or Pose
+
+Preview and Generate (Step 3):
+
+Display the generated prompt in a text box (editable).
+
+Display the generated image with a download option.
+
+Add a button "Generate Again" to revise with the same brief.
+
+Automatic Format Recognition:
+
+Implement logic to auto-fill dimensions based on common terms (e.g., "Instagram Story" → "1080x1920").
+
+Show dimension suggestions as the user types.
+
+Styling:
+
+Follow the existing design language (neon accents: #FF6A00, #00E5FF).
+
+Use glowing neon icons for buttons and options.
+
+Make the interface clean and intuitive, similar to current Masterprompt tabs.
+
+Backend Integration:
+
+Use ChatGPT API to generate text prompts based on brief input.
+
+Use image_gen API for creating visual outputs.
+
+Store uploaded logos and images securely (e.g., AWS S3).
+
+Link to the existing user database to maintain account consistency.

@@ -1,0 +1,72 @@
+interface ScenePromptParams {
+  sceneDescription: string;
+  location: string;
+  timeOfDay: string;
+  weather: string;
+  filmStock?: string;
+  directorStyle?: string;
+  tone?: string;
+  characterName?: string;
+  characterAge?: string;
+  characterAppearance?: string;
+  characterClothing?: string;
+}
+
+export function generateScenePromptWithCharacter({
+  sceneDescription,
+  location,
+  timeOfDay,
+  weather,
+  filmStock,
+  directorStyle,
+  tone,
+  characterName,
+  characterAge,
+  characterAppearance,
+  characterClothing,
+}: ScenePromptParams): string {
+  const hasCharacter = characterName?.trim();
+
+  const characterInfo = hasCharacter
+    ? `
+Character Information:
+- Name: ${characterName}
+- Age: ${characterAge || "unspecified"}
+- Appearance: ${characterAppearance || "not specified"}
+- Clothing: ${characterClothing || "not specified"}
+
+Instructions:
+- FIRST SHOT must introduce ${characterName} with FULL description: name, appearance, and clothing.
+- EVERY SHOT must reference the character's appearance and/or clothing clearly.
+- ALWAYS use the name "${characterName}" or “he/she” — never "the man", "the woman", or generic terms.
+- MAINTAIN exact traits across all shots. No changes or new details allowed.
+- DO NOT invent new traits if data is missing — omit or use emotional focus instead.
+
+Shot Consistency Format:
+Shot 1: "${characterName}, ${characterAppearance || "appearance"}, wearing ${characterClothing || "clothing"}..."
+Shot 2: "${characterName}'s [trait], [action], wearing [clothing]..."
+Shot 3: "She/He [action]... [appearance/clothing detail]..."
+
+${(!characterAppearance || !characterClothing) ? `
+⚠️ Appearance or clothing is missing — describe only what’s provided. Do NOT invent or expand visually beyond the brief.
+` : ""}
+`
+    : `No character info provided. Use a general cinematic breakdown for this scene.`;
+
+  return `
+You are a professional cinematic shot breakdown assistant.
+Generate a 3-shot breakdown for the following scene with camera details, environment, visual tone, and emotional focus.
+Include a short "Transition:" line after each shot.
+Always integrate the provided location, time, and weather exactly.
+
+Scene: ${sceneDescription || "[No scene description provided]"}
+Location: ${location}
+Time of Day: ${timeOfDay}
+Weather: ${weather}
+${filmStock ? `Film Stock: ${filmStock}` : ""}
+${directorStyle ? `Director Style: ${directorStyle}` : ""}
+${tone ? `Tone: ${tone}\nInstruction: Reflect this tone visually and emotionally in the scene.` : ""}
+
+${characterInfo}
+  `.trim();
+}
